@@ -5,15 +5,19 @@ Convert processed NIfTI files (`.nii` / `.nii.gz`) to DICOM using
 
 ## Installation 
 
-In a mamba environment (or replace "mamba" to "conda" for conda env):
+*In a mamba environment (or replace "mamba" to "conda" for conda env):
 
 ```bash
+git clone 
 mamba create -n procnii python=3.14
 mamba activate procnii
 pip install -e .
+```
 
-# Verify
+### Verify
+```bash
 procnii_todcm -h
+```
 
 ## Usage
 Run the test case (from the root directory):
@@ -25,4 +29,4 @@ procnii_todcm \
     --mapping ./test/input/subj1/mapping.json \
     --refdcm ./test/input/subj1/subj1_slice1.dcm \
     --out ./test/output/subj1/subj1_merged.nii.gz
-
+```
